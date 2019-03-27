@@ -1,5 +1,4 @@
 from abc import ABC,abstractmethod
-import re
 
 ## Esta es una clase para el ambiente de un problema
 class ambiente:
