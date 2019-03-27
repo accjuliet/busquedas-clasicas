@@ -1,4 +1,5 @@
 from abc import ABC,abstractmethod
+import re
 
 ## Esta es una clase para el ambiente de un problema
 class ambiente:
@@ -234,9 +235,17 @@ class agente:
     def __init__(self,busque):
         self.busque=busque
     def buscar(self,ini,meta):
-        self.busque.setIni(ini)
-        self.busque.setMeta(meta)
-        self.busque.buscar()
-        print('EL ORDEN DE VISITA ES:')
-        print(self.busque.getSoln())
+        #Verificamos que los datos introducidos no sean nulos
+        if (ini is None or meta is None):
+            print("Datos invalidos, ejecute el programa de nuevo")
+        else:
+            #Por ultimo verificamos que los estados se encuentren en el grafo
+            if (ini in self.busque.proble.grafo and meta in self.busque.proble.grafo):
+                self.busque.setIni(ini)
+                self.busque.setMeta(meta)
+                self.busque.buscar()
+                print('EL ORDEN DE VISITA ES:')
+                print(self.busque.getSoln())
+            else:
+                print("Los estados especificados no se encuentran en el grafo")            
         
