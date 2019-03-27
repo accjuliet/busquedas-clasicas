@@ -20,7 +20,7 @@ def main():
     amplitud = busqueda.amplitud(problema)
     age = busqueda.agente(amplitud)
     print('ORDEN DE VISITA: SEGUN PRIMERO EN AMPLITUD:')
-    age.buscar('q0','q10')
+    age.buscar(input("Ingrese el estado de inicio: "),input("Ingrese el estado meta: "))
 
 
 ## Punto de entrada al programa
