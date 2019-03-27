@@ -21,7 +21,7 @@ def main():
     busque = busqueda.prefmej(problema)
     age = busqueda.agente(busque)
     print('SEGUN PREFERENTE POR LO MEJOR:')
-    age.buscar('q1','q11')
+    age.buscar(input("Ingrese el estado de inicio: "),input("Ingrese el estado meta: "))
 
 
 ## Punto de entrada al programa
